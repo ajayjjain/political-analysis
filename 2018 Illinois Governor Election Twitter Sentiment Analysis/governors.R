@@ -4,7 +4,6 @@
 install.packages("twitteR")
 library(stringr)
 library(twitteR)
-library(xlsx)
 library(plyr)
 
 ## Initializing first set of API keys
