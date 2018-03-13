@@ -13,9 +13,10 @@ access_token = "973396302678589441-I5bAtINbIkY4oxsXLMyx05HKeUGvyoT"
 access_token_secret = "Fb8WkCCqGm63uEdVtmx1RafTErs3ryLOVtWTU4BPhOjeb"
 setup_twitter_oauth(api_key,api_secret,access_token,access_token_secret)
 
-
-neg = scan("negative-words.txt", what="character", comment.char=";")
-pos = scan("positive-words.txt", what="character", comment.char=";")
+positiveWords = download.file("https://raw.githubusercontent.com/ajayjjain/political-analysis/master/2018%20Illinois%20Governor%20Election%20Twitter%20Sentiment%20Analysis/positive-words.txt", "positiveWords.txt")
+negativeWords = download.file("https://raw.githubusercontent.com/ajayjjain/political-analysis/master/2018%20Illinois%20Governor%20Election%20Twitter%20Sentiment%20Analysis/negative-words.txt", "negativeWords.txt")
+neg = scan("negativeWords.txt", what="character", comment.char=";")
+pos = scan("positiveWords.txt", what="character", comment.char=";")
 
 score.sentiment = function(tweets, pos.words, neg.words)
   
