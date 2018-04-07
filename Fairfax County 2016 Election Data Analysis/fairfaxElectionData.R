@@ -1,4 +1,6 @@
-fairfaxElectionData = read.csv('2016_Election_Results__USPresidentVicePresident.csv')
+install.packages("ggplot2")
+library(ggplot2)
+fairfaxElectionData = read.csv('https://raw.githubusercontent.com/ajayjjain/political-analysis/master/Fairfax%20County%202016%20Election%20Data%20Analysis/2016_Election_Results__USPresidentVicePresident.csv')
 
 clintonPrecincts = subset(fairfaxElectionData, WINPARTY == "Clinton / Kaine (D)")
 trumpPrecincts = subset(fairfaxElectionData, WINPARTY == "Trump / Pence (R)")
